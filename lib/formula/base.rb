@@ -17,8 +17,6 @@ module ElixiratorTask
         fuel + additional_fuel
       end
 
-      protected
-
       def calculate_additional_fuel(fuel, sum = 0)
         return sum unless needs_more_fuel?(fuel)
         additional_fuel = formula(fuel)

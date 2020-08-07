@@ -4,15 +4,15 @@ require_relative './formula/launch'
 
 module ElixiratorTask
   class FuelCalculator
-    attr_reader :mass, :planets
+    attr_reader :mass, :missions
 
-    def initialize(mass, planets)
+    def initialize(mass, missions)
       @mass = mass
-      @planets = planets
+      @missions = missions
     end
 
     def call
-      planets.inject(0) {|sum, planet| sum += calculate(mass + sum, planet[0], planet[1]) }
+      missions.inject(0) {|sum, mission| sum += calculate(mass + sum, mission[0], mission[1]) }
     end
 
     private
