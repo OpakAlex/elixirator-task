@@ -20,6 +20,7 @@ module ElixiratorTask
       def calculate_additional_fuel(fuel, sum = 0)
         return sum unless needs_more_fuel?(fuel)
         additional_fuel = formula(fuel)
+        return sum if additional_fuel < 0
         calculate_additional_fuel(additional_fuel, sum + additional_fuel)
       end
 

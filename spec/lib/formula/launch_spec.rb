@@ -13,7 +13,7 @@ describe ElixiratorTask::Formula::Launch do
 
     it "returns fuel for launch with 3.711 gravity" do
       value = described_class.new(1000, 3.711).calculate
-      expect(value).to eq 109
+      expect(value).to eq 122
     end
 
     it "returns fuel for launch with 9.807 gravity" do
@@ -30,7 +30,7 @@ describe ElixiratorTask::Formula::Launch do
 
     it "return addition fuel for 1000 fuel wuth 3.711 gravity" do
       value = described_class.new(1000, 3.711).calculate_additional_fuel(1000)
-      expect(value).to eq 109
+      expect(value).to eq 122
     end
 
     it "return addition fuel for 1000 fuel wuth 9.807 gravity" do

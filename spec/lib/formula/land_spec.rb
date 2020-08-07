@@ -13,12 +13,12 @@ describe ElixiratorTask::Formula::Land do
 
     it "returns fuel for land with 3.711 gravity" do
       value = described_class.new(1000, 3.711).calculate
-      expect(value).to eq 48
+      expect(value).to eq 80
     end
 
     it "returns fuel for land with 9.807 gravity" do
       value = described_class.new(1000, 9.807).calculate
-      expect(value).to eq 303
+      expect(value).to eq 329
     end
   end
 
@@ -30,12 +30,12 @@ describe ElixiratorTask::Formula::Land do
 
     it "return addition fuel for 1000 fuel wuth 3.711 gravity" do
       value = described_class.new(1000, 3.711).calculate_additional_fuel(1000)
-      expect(value).to eq 48
+      expect(value).to eq 80
     end
 
     it "return addition fuel for 1000 fuel wuth 9.807 gravity" do
       value = described_class.new(1000, 9.807).calculate_additional_fuel(1000)
-      expect(value).to eq 303
+      expect(value).to eq 329
     end
   end
 
